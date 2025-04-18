@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#E6E3D3"
+    tools:context=".MainActivity">
+
+    <!-- Шапка с названием и кнопкой языка -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingRight="10dp"
+        android:background="#082567"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Shakespire"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <ImageButton
+            android:id="@+id/language"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/language" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        app:layout_constraintTop_toBottomOf="@+id/header">
+
+        <ImageView
+            android:id="@+id/maskot"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/shekspire" />
+
+        <TextView
+            android:id="@+id/text_maskot"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/text_hello"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gearView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@+id/container">
+        <!--android:visibility="gone"-->
+        <ImageView
+            android:id="@+id/gear1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/gear1" />
+        <ImageView
+            android:id="@+id/gear2"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="-45dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/gear2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/pdf_preview_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@drawable/scroll_ramka"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/input_layout">
+        <!--android:visibility="gone"-->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/scroll" />
+
+        <TextView
+            android:id="@+id/pdf_file_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#082567"
+            android:textSize="16sp" />
+
+        <ImageButton
+            android:id="@+id/remove_pdf"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/close" />
+    </LinearLayout>
+
+    <!-- Блок ввода (прибит к низу) -->
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@drawable/ramka"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="@string/text_input"
+            android:textColor="#082567" />
+
+        <ImageButton
+            android:id="@+id/send"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="7dp"
+            android:background="@drawable/send_off"
+            android:scaleType="centerInside" />
+
+        <ImageButton
+            android:id="@+id/attach"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/attach"
+            android:scaleType="centerInside"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

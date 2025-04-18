@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Shakespire</string>
+    <string name="text_hello">Hi! I am AI Shakespeare, and I will help you create a book! \n\n Send me the text in pdf format or print it, and I\'ll create an illustrated book!</string>
+    <string name="text_input">Enter the text...</string>
+    <string name="text_input_learn">We are reading your book...</string>
+</resources>
