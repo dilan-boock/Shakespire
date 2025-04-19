@@ -3,4 +3,6 @@
     <string name="text_hello">Привет! Я - ИИ Шекспир и я помогу тебе сотворить книгу!\n\nОтправь мне текст в pdf-формате или напечатай его - и я сотворю иллюстрированную книгу!</string>
     <string name="text_input">Введите текст...</string>
     <string name="text_input_learn">Читаем вашу книгу...</string>
+    <string name="text_input_download">Ваша книга готова!</string>
+    <string name="text_input_learn2">Творим магию...</string>
 </resources>
