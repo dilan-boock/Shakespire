@@ -231,7 +231,7 @@ class MainActivity : AppCompatActivity() {
 
         // Запускаем корутину для остановки через 30 секунд
         animationJob = lifecycleScope.launch {
-            delay(20000) // Ждем 30 секунд
+            delay(10000) // Ждем 30 секунд
 
             // Останавливаем анимацию в основном потоке
             withContext(Dispatchers.Main) {
@@ -265,19 +265,20 @@ class MainActivity : AppCompatActivity() {
 
         // Запускаем корутину для остановки через 30 секунд
         animationJob2 = lifecycleScope.launch {
-            delay(10000) // Ждем 30 секунд
+            delay(5000) // Ждем 30 секунд
             val maskotImage: ImageView = findViewById(R.id.maskot)
             maskotImage.setBackgroundResource(R.drawable.maskot_magik)
 
             val maskotText: TextView = findViewById(R.id.text_maskot)
             maskotText.setText(R.string.text_input_learn2)
-            delay(10000) // Ждем 30 секунд
+            delay(5000) // Ждем 30 секунд
 
             // Останавливаем анимацию в основном потоке
             withContext(Dispatchers.Main) {
                 rotationAnimator2?.cancel()
                 imageView.rotation = 0f // Сбрасываем rotation в исходное положение
 
+                maskotImage.setBackgroundResource(R.drawable.shekspire)
                 val maskotText: TextView = findViewById(R.id.text_maskot)
                 maskotText.setText(R.string.text_input_download)
 
