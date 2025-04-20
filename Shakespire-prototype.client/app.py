@@ -188,4 +188,4 @@ with gr.Blocks() as interface:
         outputs=[output_message, pdf_output, txt_output]
     )
 
-interface.launch()
+interface.launch(server_name="0.0.0.0", server_port=7860)
